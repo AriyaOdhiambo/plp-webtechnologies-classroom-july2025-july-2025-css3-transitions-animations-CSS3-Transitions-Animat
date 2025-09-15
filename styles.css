@@ -1,0 +1,42 @@
+/* Basic Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+/* Part 1: CSS transitions & keyframes */
+.fancy-btn {
+  padding: 10px 20px;
+  background: royalblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.fancy-btn:hover {
+  background: darkorange;
+  transform: scale(1.2);
+}
+
+/* Box to animate */
+#box {
+  width: 100px;
+  height: 100px;
+  background: crimson;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Part 3: CSS animation triggered by JS */
+@keyframes moveAndFade {
+  0%   { transform: translateY(0); opacity: 1; }
+  50%  { transform: translateY(-100px); opacity: 0.5; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate {
+  animation: moveAndFade 2s ease-in-out;
+}
